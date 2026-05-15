@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #eaecf4;
+  background-color: #0f1117;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #353852;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #636882;
+}
+
+/* Glass panel utility */
+.glass {
+  background: rgba(28, 30, 46, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(42, 45, 63, 0.5);
+  border-radius: 12px;
+}
+
+.glass-card {
+  background: rgba(22, 24, 34, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #2a2d3f;
+  border-radius: 10px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.glass-card:hover {
+  border-color: #353852;
+  background: rgba(28, 30, 46, 0.9);
+}
