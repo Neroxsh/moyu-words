@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicegui-org/nicegui/main/src-tauri/tauri.conf.json",
-  "productName": "摸鱼背词",
+  "productName": "MoyuWords",
   "version": "0.1.0",
   "identifier": "com.moyu.words",
   "build": {
