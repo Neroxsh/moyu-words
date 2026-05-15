@@ -44,7 +44,7 @@
 | 平台 | 下载 |
 |------|------|
 | macOS 11+ | [摸鱼背词.dmg](https://github.com/Neroxsh/moyu-words/releases/latest) |
-| Windows 10+ | [MoyuWords.msi](https://github.com/Neroxsh/moyu-words/releases/latest) |
+| Windows 10+ | [MoyuWords.exe](https://github.com/Neroxsh/moyu-words/releases/latest) |
 
 > 下载后直接安装即可。macOS 首次打开如提示"无法验证开发者"，前往 **系统设置 → 隐私与安全性** 点击"仍要打开"。
 
