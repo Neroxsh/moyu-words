@@ -1,80 +1,65 @@
-# 摸鱼背词 (Moyu Words)
+<p align="center">
+  <img src="src-tauri/icons/128x128@2x.png" alt="摸鱼背词" width="128" height="128" />
+</p>
 
-一款可在本地运行、可打包成 macOS App 和 Windows exe 的摸鱼背单词桌面应用。
+<h1 align="center">摸鱼背词</h1>
+<p align="center">
+  <b>看起来在摸鱼，其实你在变强。</b>
+</p>
 
-**技术栈**: Tauri v2 + React + TypeScript + Rust + SQLite
+---
+
+<br>
+
+> ⏺ 等编译的时候干嘛？刷手机？发呆？
+>
+> ⏺ 单词 App 打开又关，背了三天又忘了？
+>
+> ⏺ 想在工位悄悄学习，又怕老板路过看见？
+
+**别装了。你需要摸鱼背词。**
+
+透明悬浮窗悬在屏幕角落。没有大窗口，没有弹窗通知。路过你屏幕的人，什么都看不到。
+
+- 左键复习，右键切词，长按三秒 —— 碎裂消失，这个词你拿下了。
+- 七本内置词书 + 自定义拖入，每日计划自动拆好。你只管背。
+- 从初中到 SAT，从发呆到背完整本词书，只差一个摸鱼窗口。
+
+**把编译间隙还给大脑，把刷手机时间变成词汇量。**
+
+<br>
+
+<p align="center">
+  <a href="#-开始使用">开始使用</a>
+  &nbsp;·&nbsp;
+  <a href="#-功能">功能</a>
+  &nbsp;·&nbsp;
+  <a href="#-词书来源">词书</a>
+</p>
+
+<br>
+
+## 开始使用
+
+| 平台 | 下载 |
+|------|------|
+| macOS 11+ | [摸鱼背词.dmg](https://github.com/Neroxsh/moyu-words/releases/latest) |
+| Windows 10+ | [MoyuWords.msi](https://github.com/Neroxsh/moyu-words/releases/latest) |
+
+> 下载后直接安装即可。macOS 首次打开如提示"无法验证开发者"，前往 **系统设置 → 隐私与安全性** 点击"仍要打开"。
 
 ## 功能
 
-- 本地词书导入：支持 `.txt`、`.csv`、`.json` 格式
-- 内置词书：初中、高中、四级、六级、考研、托福、SAT
-- 学习计划：按"几天背完"自动切分单元
-- 摸鱼模式：透明、置顶、**可拖拽缩放**的悬浮窗
-- 鼠标控制：左键上一词，右键下一词，**左键长按 3 秒触发文字碎裂动画 → 归档熟识单词**
-- 键盘控制：`Ctrl+Left` / `Ctrl+Right` 切词，空格暂停/继续
-- 自动切词：可设置间隔秒数
-- 熟识词归档：已掌握的单词自动移出背诵队列
-- 进度管理：单元进度、打卡、熟识词查看、恢复、导出
-
-## 开发
-
-### 前置环境
-
-- [Node.js 20+](https://nodejs.org/)
-- [Rust](https://www.rust-lang.org/tools/install)
-- macOS: Xcode Command Line Tools (`xcode-select --install`)
-- Windows: [WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)（Win10+ 已预装）
-
-### 本地运行
-
-```bash
-npm install
-npm run tauri dev
-```
-
-### 打包
-
-```bash
-npm run tauri build
-```
-
-产物：
-- macOS: `src-tauri/target/release/bundle/dmg/`
-- Windows: `src-tauri/target/release/bundle/msi/`
-
-## 项目结构
-
-```text
-moyu-words/
-├── src/                    # React 前端
-│   ├── main.tsx            # 主窗口入口
-│   ├── overlay.tsx         # 摸鱼窗口入口
-│   ├── App.tsx             # 根组件
-│   ├── components/         # UI 组件
-│   ├── hooks/              # 自定义 hooks
-│   ├── store/              # Zustand 状态管理
-│   ├── lib/                # API 封装 + 工具函数
-│   └── types/              # TypeScript 类型
-├── src-tauri/              # Rust 后端
-│   ├── Cargo.toml
-│   ├── tauri.conf.json
-│   ├── resources/vocab/    # 内置词书
-│   └── src/
-│       ├── main.rs
-│       ├── lib.rs
-│       ├── db/             # SQLite 数据库模块
-│       ├── vocab/          # 词书解析
-│       └── commands/       # Tauri 命令
-├── package.json
-├── index.html              # 主窗口 HTML
-├── overlay.html            # 摸鱼窗口 HTML
-└── vite.config.ts
-```
+- **摸鱼模式** — 透明置顶窗口，可拖拽缩放。路人视角：你在写代码
+- **智能复习** — 左键上一词、右键下一词、长按 3 秒标记熟识并播放碎裂动画
+- **学习计划** — 选一本词书，告诉它几天背完，自动帮你拆成每日单元
+- **进度追踪** — 单元打卡、熟识词库、一键导出
+- **词书自由** — 内置初中/高中/四级/六级/考研/托福/SAT，也支持拖入自己的 `.txt` `.csv` `.json`
 
 ## 词书来源
 
-内置词书整理自 [`KyleBing/english-vocabulary`](https://github.com/KyleBing/english-vocabulary)。
+内置词书整理自 [KyleBing/english-vocabulary](https://github.com/KyleBing/english-vocabulary)。
 
 ## License
 
-MIT
+[MIT](LICENSE)
